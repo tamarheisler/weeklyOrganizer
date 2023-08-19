@@ -1,0 +1,162 @@
+#openingPage {
+    background-color: black;
+}
+.days{
+    background: #FF416C;
+	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+	background: linear-gradient(to right, #FF4B2B, #FF416C);
+    height: 793px;
+    width: 230px;
+}
+#allweek{
+    display: flex;
+    position: center;
+    left: -600px;
+    
+}
+h3 {
+    font-family: cursive;
+    display: block;
+    font-weight: bold;
+}
+
+.daysBtns {
+    width:auto;
+    margin: 10px;
+    padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #000000;
+    cursor: pointer;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+#deleteBtn{
+    position: absolute;
+    right: 200px;
+    width: 300;
+    background: #FF416C;
+	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+	background: linear-gradient(to right, #FF4B2B, #FF416C);
+}
+#meetingsDay #titleDay {
+    width: 3000px;
+    height: 40px;
+   position: absolute;
+   top: 100px;
+   left: -420px;
+    color: rgb(0, 0, 0);
+    background-color: #FF416C;
+    font-size: 100px;
+
+}
+
+#CurDayName{
+    font-size: 100px;
+}
+
+.newMeet {
+    width: 100px;
+    height: 150px;
+    font-family: cursive;
+    position: absolute;
+    top: 500px;
+    right: -100px;
+    color: rgb(0, 0, 0);
+    background-color: #FF416C;
+    font-size: 20px;
+}
+.deleteMeet{
+    width: 100px;
+    height: 80px;
+    font-family: cursive;
+    position: absolute;
+    top: 692px;
+    right: -100px;
+    color: rgb(0, 0, 0);
+    background-color: #FF416C;
+    font-size: 20px;
+}
+.updateMeet{
+    width: 100px;
+    height: 80px;
+    font-family: cursive;
+    position: absolute;
+    top: 819px;
+    right: -100px;
+    color: rgb(0, 0, 0);
+    background-color: #FF416C;
+    font-size: 20px;
+}
+#inputNew {
+    position: absolute;
+    top: 300px;
+}
+
+.btnOpening {
+  align-items: center;  
+}
+
+#containerAllTheMeetings{
+    border: solid black;
+    position: absolute;
+    top: 300px;
+    right: 200px;
+    width: 1200px;
+    height: 600px;
+}
+#containerOfASelectedDay{
+    border: solid black;
+    position: absolute;
+    top: 300px;
+    right: 200px;
+    width: 1200px;
+    height: 600px;
+}
+
+.meet {
+    background-color: #FF416C;
+    width: auto;
+    height: auto;
+}
+
+#meet1{
+    background-color: #FF416C;
+    width: auto;
+    height: auto;
+}
+
+.divMeetings{
+    background-color: #FF416C;
+    width: auto;
+    height: auto;
+}
+
+#new-div-meet{
+    background-color: #FF416C;
+    width: auto;
+    height: auto;
+}
+
+#delBtn {
+    background-color: #ffffff;
+    width: auto;
+    height: auto;
+}
+
+.ttlLog {
+    color :black;
+}
+
+#logbtn{
+    background-color: #FF416C;
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    top: 920px;
+    right: -250px;
+    border-radius: 30px;
+    border: none;
+    font-family: cursive;
+    font-style: bold;
+}

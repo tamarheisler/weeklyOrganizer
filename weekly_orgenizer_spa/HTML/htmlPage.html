@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My meetings</title>
+    <link rel="icon" href="../IMG/red-icon.jpg" type="image/icon type">
+
+    <link rel="stylesheet" href="../CSS/login_and_register.css">
+    <link rel="stylesheet" href="../CSS/opening.css">
+    <link rel="stylesheet" href="../CSS/welcome.css">
+    <link rel="stylesheet" href="../CSS/weekAndDay.css">
+</head>
+
+<body>
+    <div class="page active" id="signIn">
+        <div class="container" id="container">
+            <div class="form-container sign-up-container">
+                <form>
+                    <h1 class="ttlLog">Create Account</h1>
+                    <div class="social-container">
+                        <a href="#" class="social"><img src="../IMG/google.jpg"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social"><img src="../IMG/instgram.jpg"><i
+                                class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="social"><img src="../IMG/twitter.jpg"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <span>or use your email for registration</span>
+                    <input type="text" placeholder="Name" id="userName" />
+                    <input type="email" placeholder="Email" id="userMail" />
+                    <input type="password" placeholder="Password" id="userPassword" />
+                    <button type="button" onclick="sign_up()" class="nPage"> <a href="#" data-target="OpeningPage"
+                        class="nav-link">
+                        Sign Up </a>
+                    </button>
+                </form>
+            </div>
+            <div class="form-container sign-in-container">
+                <form>
+                    <h1 class="ttlLog">Sign in</h1>
+                    <div class="social-container">
+                        <a href="#" class="social"><img src="../IMG/google.jpg"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social"><img src="../IMG/instgram.jpg"><i
+                                class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="social"><img src="../IMG/twitter.jpg"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <span>or use your account</span>
+                    <input type="email" placeholder="Email" id="userMail1" />
+                    <input type="password" placeholder="Password" id="userPassword1" />
+                    <a onclick="sendEmail()" id="forget">Forgot your password?</a>
+                    <button type="button" onclick="log_in()" class="nPage" data-target="OpeningPage"
+                        class="nav-link">Sign In
+                    <!-- <a href="#">
+                            Sign In </a> -->
+                    </button>
+                </form>
+            </div>
+
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1>Welcome Back!</h1>
+
+                        <p>To keep connected with us please login with your personal info</p>
+                        <button class="ghost nPage" id="signInDes">Sign In</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1>Hello, Friend!</h1>
+                        <p>Enter your personal details and start journey with us</p>
+                        <button class="ghost nPage" id="signUpDes">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="page" id="OpeningPage">
+        <p> Welcome <span id="nameOfCurrent"> </span>!</p>
+        <button onclick="logOut()" id="logbtn">Log out</button>
+        <button  class="nPage btnOpening"> <a href="#" data-target="pageAllTheWeek"
+                class="nav-link"> go to my week designer</a></button><br><br><br>
+        <button onclick="getdataOfAspecific()" class="nPage btnOpening"> <a href="#" data-target="pageAllTheWeek"
+                class="nav-link"> get data of a specific day</a></button><br><br><br>
+        <button onclick="getAllData()" class="nPage btnOpening"> <a href="#" data-target="pageAllTheWeek"
+                class="nav-link"> get all my meetings</a></button>
+        <p id="dataContainer"> </p>
+    </div>
+
+    <div class="page" id="pageAllTheWeek">
+        <div id="allweek">
+            <button onclick="openDay('Sunday')" class="daysBtns">
+                <div id="sun" class="days">
+                    <h1>sunday</h1>
+                    <p>07:00 _________ <br><br>
+                        08:00 _________ <br><br>09:00 _________ <br><br>10:00 _________ <br><br>11:00 _________ <br><br>
+                        12:00 _________ <br><br>13:00 _________ <br><br>14:00 _________ <br><br>15:00 _________ <br><br>
+                        16:00 _________ <br><br>17:00 _________ <br><br>18:00 _________ <br><br>19:00 _________ <br><br>
+                        20:00 _________ <br><br>21:00 _________ <br><br>22:00 _________ <br><br>23:00 _________ <br><br>
+                    </p>
+                </div>
+            </button>
+            <button onclick="openDay('Monday')" class="daysBtns">
+                <div id="mon" class="days"><a href=""></a>
+                    <h1>monday</h1>
+                    <p>07:00 _________ <br><br>
+                        08:00 _________ <br><br>09:00 _________ <br><br>10:00 _________ <br><br>11:00 _________ <br><br>
+                        12:00 _________ <br><br>13:00 _________ <br><br>14:00 _________ <br><br>15:00 _________ <br><br>
+                        16:00 _________ <br><br>17:00 _________ <br><br>18:00 _________ <br><br>19:00 _________ <br><br>
+                        20:00 _________ <br><br>21:00 _________ <br><br>22:00 _________ <br><br>23:00 _________ <br><br>
+                    </p>
+                </div>
+            </button>
+            <button onclick="openDay('Tuesday')" class="daysBtns">
+                <div id="tue" class="days"><a href=""></a>
+                    <h1>tuesday</h1>
+                    <p>07:00 _________ <br><br>
+                        08:00 _________ <br><br>09:00 _________ <br><br>10:00 _________ <br><br>11:00 _________ <br><br>
+                        12:00 _________ <br><br>13:00 _________ <br><br>14:00 _________ <br><br>15:00 _________ <br><br>
+                        16:00 _________ <br><br>17:00 _________ <br><br>18:00 _________ <br><br>19:00 _________ <br><br>
+                        20:00 _________ <br><br>21:00 _________ <br><br>22:00 _________ <br><br>23:00 _________ <br><br>
+                    </p>
+                </div>
+            </button>
+            <button onclick="openDay('Wedensday')" class="daysBtns">
+                <div id="wed" class="days"><a href=""></a>
+                    <h1>wedensday</h1>
+                    <p>07:00 _________ <br><br>
+                        08:00 _________ <br><br>09:00 _________ <br><br>10:00 _________ <br><br>11:00 _________ <br><br>
+                        12:00 _________ <br><br>13:00 _________ <br><br>14:00 _________ <br><br>15:00 _________ <br><br>
+                        16:00 _________ <br><br>17:00 _________ <br><br>18:00 _________ <br><br>19:00 _________ <br><br>
+                        20:00 _________ <br><br>21:00 _________ <br><br>22:00 _________ <br><br>23:00 _________ <br><br>
+                    </p>
+                </div>
+            </button>
+            <button onclick="openDay('Thursday')" class="daysBtns">
+                <div id="thu" class="days"><a href=""></a>
+                    <h1>thursday</h1>
+                    <p>07:00 _________ <br><br>
+                        08:00 _________ <br><br>09:00 _________ <br><br>10:00 _________ <br><br>11:00 _________ <br><br>
+                        12:00 _________ <br><br>13:00 _________ <br><br>14:00 _________ <br><br>15:00 _________ <br><br>
+                        16:00 _________ <br><br>17:00 _________ <br><br>18:00 _________ <br><br>19:00 _________ <br><br>
+                        20:00 _________ <br><br>21:00 _________ <br><br>22:00 _________ <br><br>23:00 _________ <br><br>
+                    </p>
+                </div>
+            </button>
+            <button onclick="openDay('Friday')" class="daysBtns">
+                <div id="fri" class="days"><a href=""></a>
+                    <h1>friday</h1>
+                    <p>07:00 _________ <br><br>
+                        08:00 _________ <br><br>09:00 _________ <br><br>10:00 _________ <br><br>11:00 _________ <br><br>
+                        12:00 _________ <br><br>13:00 _________ <br><br>14:00 _________ <br><br>15:00 _________ <br><br>
+                        16:00 _________ <br><br>17:00 _________ <br><br>18:00 _________ <br><br>19:00 _________ <br><br>
+                        20:00 _________ <br><br>21:00 _________ <br><br>22:00 _________ <br><br>23:00 _________ <br><br>
+                    </p>
+                </div>
+            </button>
+        </div>
+        <button onclick="DeleteDay()" id="deleteBtn">Click here to delete a day!</button>
+    </div>
+
+    <div class="page" id="specificDay">
+        <button onclick="logOut()" id="logbtn">Log out</button>
+        <div id="meetingsDay">
+            <p id="titleDay"> Meetings for <span id="CurDayName"> </span> </p>
+        </div>
+        <div class="newMeet" id="inputNew"> <input type="text" placeholder="subject" id="new_sub"> <input
+                type="time" placeholder="hour" id="new_hour"> </div>
+        <button class="newMeet" onclick="addNewMeet()" id="btnAdd"> Creat a new Meet </button>
+        <button class="deleteMeet" onclick="deleteMeet()" id="btnAdd"> delete Meet </button>
+        <button class="updateMeet" onclick="updateMeet()" id="btnAdd"> update Meet </button>
+        <body>            
+        </body>
+        <div id="containerAllTheMeetings"> </div>
+    </div>
+
+    <div class="page" id="oneMeet">
+        <button onclick="logOut()" id="logbtn">Log out</button>
+        <div id="meet1">
+            <p><b> You have a meet:</b></p>
+            <p><b> subject: </b><span id="content_sub"> </span></p>
+            <p><b>hour: </b><span id="content_hour"> </span></p>
+        </div>
+    </div>
+
+    <div class="page" id="selectedDay">
+        <div id="meetingsDay">
+            <p id="titleDay"> Meetings for <span id="CurDayName"> </span> </p>
+        </div>
+        <button onclick="logOut()" id="logbtn">Log out</button>
+        <div id="containerOfASelectedDay">
+
+        </div>
+    </div>  
+
+
+</body>
+<script src="../JS/login_and_register.js"></script>
+<script src="../JS/spa.js"></script>
+<script src="../JS/openingPage.js"></script>
+<script src="../JS/client.js"></script>
+<script src="../JS/dataBase.js"></script>
+<script src="../JS/Fxml.js"></script>
+<script src="../JS/server.js"></script>
+<script src="../JS/MeetsApp.js"></script>
+
+
+
+</html>
