@@ -10,6 +10,7 @@ You can read more about the idea of SPA here:
       https://en.wikipedia.org/wiki/Single-page_application - Wikipedia
 
 In few words-  the benefits of the using in this method are:
+
       1. Super fast experience.
       2. Reduced server load. 
       3. Offline availability.
