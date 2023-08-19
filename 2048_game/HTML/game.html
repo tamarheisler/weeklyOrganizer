@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/game.css">
+    <title>2048 game</title>
+</head>
+
+<body onkeyup="moove()">
+    <div id="containerAll"> 
+  
+    <div id="container"></div>
+    <div id="nameOfPlayer">
+        <h1 id="name_js">r</h1>
+        <h1 id="name_name">player: </h1>
+    </div>
+    <div class="score" id="yourscore">Your score is: <span id="innerScore"> </span> </div>
+    <div class="score">high score is: </div>
+    </div>
+    
+    <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+        <source src="../img/back.mp4" type="video/mp4">
+    </video>
+    <a href="../HTML/game.html" id="makeAnewGame">
+    </a>
+
+
+
+</body>
+<script src="../JS/page.js"></script>
+
+</html>
